@@ -27,4 +27,12 @@ public class Estudiante extends Persona {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "carrera='" + carrera + '\'' +
+                ", matricula='" + matricula + '\'' +
+                '}';
+    }
 }

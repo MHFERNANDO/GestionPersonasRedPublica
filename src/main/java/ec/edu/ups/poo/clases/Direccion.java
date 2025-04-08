@@ -1,6 +1,9 @@
 package ec.edu.ups.poo.clases;
 
+import ec.edu.ups.poo.enums.TipoDireccion;
+
 public class Direccion {
+    private TipoDireccion tipoDireccion;
     private String tipo;
     private String callePrincipal;
     private String calleSecundaria;
@@ -11,7 +14,8 @@ public class Direccion {
 
     public Direccion() {}
 
-    public Direccion(String tipo, String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais) {
+    public Direccion(TipoDireccion tipoDireccion,String tipo, String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais) {
+        this.tipoDireccion=tipoDireccion;
         this.tipo = tipo;
         this.callePrincipal = callePrincipal;
         this.calleSecundaria = calleSecundaria;
@@ -19,6 +23,14 @@ public class Direccion {
         this.ciudad = ciudad;
         this.provincia = provincia;
         this.pais = pais;
+    }
+
+    public TipoDireccion getTipoDireccion() {
+        return tipoDireccion;
+    }
+
+    public void setTipoDireccion(TipoDireccion tipoDireccion) {
+        this.tipoDireccion = tipoDireccion;
     }
 
     public String getTipo() {
@@ -77,4 +89,17 @@ public class Direccion {
         this.pais = pais;
     }
 
+    @Override
+    public String toString() {
+        return "Direccion{" +
+                "tipoDireccion=" + tipoDireccion +
+                ", tipo='" + tipo + '\'' +
+                ", callePrincipal='" + callePrincipal + '\'' +
+                ", calleSecundaria='" + calleSecundaria + '\'' +
+                ", numeracion='" + numeracion + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
+    }
 }

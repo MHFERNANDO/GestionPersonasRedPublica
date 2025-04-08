@@ -1,5 +1,6 @@
 package ec.edu.ups.poo.clases;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Persona {
@@ -10,9 +11,12 @@ public class Persona {
     private String correoElectronico;
     private List<Direccion> direcciones;
     private List<Institucion> instituciones;
-    public Persona() {}
-    public Persona(String cedula, String nombre, String apellido, String telefono, String correoElectronico,
-                   List<Direccion> direcciones, List<Institucion> instituciones) {
+
+
+    public Persona() {
+        this.direcciones=new ArrayList<>();
+    }
+    public Persona(String cedula, String nombre, String apellido, String telefono, String correoElectronico, List<Direccion> direcciones, List<Institucion> instituciones) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -20,6 +24,11 @@ public class Persona {
         this.correoElectronico = correoElectronico;
         this.direcciones = direcciones;
         this.instituciones = instituciones;
+
+        this.direcciones=new ArrayList<>();
+    }
+    public void addDireccion (Direccion direccion){
+        direcciones.add(direccion);
     }
 
     public String getCedula() {

@@ -39,4 +39,14 @@ public class Visitante extends Persona{
     public void setFechaSalida(GregorianCalendar fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
+
+
+    @Override
+    public String toString() {
+        return "Visitante{" +
+                "motivoVisita='" + motivoVisita + '\'' +
+                ", fechaEntrada=" + fechaEntrada +
+                ", fechaSalida=" + fechaSalida +
+                '}';
+    }
 }

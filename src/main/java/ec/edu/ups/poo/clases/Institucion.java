@@ -34,4 +34,15 @@ public class Institucion {
     public List<Persona> getPersonas() {
         return personas;
     }
+
+    @Override
+    public String toString() {
+        return "Institucion{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", sedes=" + sedes +
+                ", direccionesIns=" + direccionesIns +
+                ", personas=" + personas +
+                '}';
+    }
 }
